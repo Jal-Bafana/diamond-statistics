@@ -104,6 +104,100 @@ You can also run each analysis script separately for more focused analysis:
 - **Analysis Results**: CSV files with analysis results will be saved in the `analysis/` directory
 - **Console Output**: Detailed statistical results will be printed to the R console
 
+## Plot Descriptions and Interpretations
+
+The analysis generates a comprehensive set of visualizations to help understand the diamonds dataset. Below is a description of the key plots and what insights they provide:
+
+### Basic Statistical Plots
+
+1. **price_histogram.png**: Histogram showing the distribution of diamond prices. The right-skewed pattern indicates that most diamonds are in the lower price range, with fewer very expensive diamonds.
+
+2. **carat_histogram.png**: Distribution of diamond carat weights. Shows common weight thresholds that may reflect market preferences.
+
+3. **price_by_cut_boxplot.png**: Box plots comparing diamond prices across different cut qualities. Helps identify if better cuts command higher prices.
+
+4. **price_by_clarity_boxplot.png**: Box plots showing how clarity affects diamond pricing. Clearer diamonds (higher clarity grades) generally have higher median prices.
+
+5. **price_vs_carat_scatter.png**: Scatter plot of price against carat with a trend line. Shows the strong positive relationship between a diamond's weight and its price.
+
+6. **price_vs_carat_by_cut.png**: Faceted scatter plots showing how the price-carat relationship varies across different cut qualities.
+
+### Probability Distribution Analysis
+
+7. **price_qq_plot.png**: Quantile-Quantile plot for diamond prices, evaluating if prices follow a normal distribution.
+
+8. **price_normality_hist.png**: Histogram with normal curve overlay, showing how price distribution deviates from normality.
+
+9. **log_price_qq_plot.png** and **log_price_normality_hist.png**: Similar plots for log-transformed prices, typically showing better normality.
+
+### Correlation Analysis
+
+10. **correlation_matrix.png**: Heat map displaying correlations between numerical variables. Intense colors indicate stronger relationships (positive or negative).
+
+### Regression and Predictive Analysis
+
+11. **advanced_model_residuals.png**: Residual plot from the regression model. Patterns may indicate model limitations or suggest transformations.
+
+12. **decision_tree.png**: Visualization of the decision tree model for predicting diamond prices, showing key decision points based on features.
+
+13. **variable_importance.png**: Bar chart from the random forest model showing which variables are most important in predicting diamond prices.
+
+### Hypothesis Testing Visualizations
+
+14. **cut_price_comparison.png**: Density plots comparing price distributions between different cuts, often used in t-tests.
+
+15. **cut_color_heatmap.png**: Visualization of the association between cut and color, related to chi-square test results.
+
+16. **anova_cut_price.png**: Violin plots comparing price distributions across cuts, visualizing ANOVA results.
+
+### High-Quality Visualizations
+
+The `plots/high_quality/` directory contains more refined versions of key visualizations:
+
+17. **cut_violin_plot.png**: Enhanced violin plots showing the distribution of prices across different cut qualities.
+
+18. **multidim_scatter_plot.png**: Multi-dimensional scatter plot showing relationships between price, carat, clarity, and depth.
+
+19. **correlation_heatmap.png**: Detailed correlation matrix with hierarchical clustering to group related variables.
+
+20. **interactive_scatter.html**: Interactive plot allowing exploration of the relationship between price, carat, and other variables.
+
+21. **facet_histograms.png**: Grid of histograms showing price distributions across different combinations of cut and color.
+
+22. **parallel_coords.png**: Parallel coordinate plot for multi-dimensional analysis of numerical variables.
+
+23. **ridgeline_plot.png**: Overlapping density curves showing price distribution by clarity.
+
+24. **price_bubble_plot.png**: Bubble chart displaying average prices by cut, color, and clarity combinations.
+
+25. **price_per_carat_boxplot.png**: Box plots comparing the price-per-carat ratio across different cuts.
+
+26. **value_analysis_hist.png**: Histogram identifying potentially overpriced and underpriced diamonds.
+
+27. **dimension_pairs.png**: Scatter plot matrix showing relationships between diamond dimensions.
+
+28. **market_share_pie.png**: Pie chart showing the market share by cut.
+
+29. **dashboard_summary.png**: Summary dashboard with key metrics about the diamond dataset.
+
+## Key Visual Insights
+
+The visualizations collectively reveal several important patterns:
+
+1. **Price Determinants**: The plots show that carat weight is the strongest predictor of price, followed by clarity and cut quality.
+
+2. **Non-linear Relationship**: The price-carat relationship is non-linear, with larger diamonds commanding disproportionately higher prices.
+
+3. **Quality Premium**: Better cut quality generally commands a higher price-per-carat, visible in the box plots.
+
+4. **Market Distribution**: The distribution plots reveal market concentrations at specific carat thresholds (0.5, 1.0, etc.).
+
+5. **Feature Interactions**: Multiple plots demonstrate how cut, color, and clarity interact to influence pricing beyond their individual effects.
+
+6. **Statistical Validation**: The QQ-plots and residual analysis confirm that log-transformation improves the normality of price data.
+
+7. **Predictive Models**: The decision tree and random forest visualizations explain which factors matter most when predicting diamond prices.
+
 ## Common Issues and Solutions
 
 - **Package Installation Errors**: If you encounter package installation errors, try running:
