@@ -12,7 +12,7 @@ const Footer = () => {
             <Typography variant="body2" color="text.secondary" align="center">
               {'© '}
               {new Date().getFullYear()}
-              {' Diamond Price Estimator. All rights reserved.'}
+              {' Diamond Price Estimator. Made with ❤️ by K036, K021, K005, K013 - MPSTMEs B. Tech Cybersecurity 2027 Batch'}
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', gap: 3 }}>
@@ -26,15 +26,6 @@ const Footer = () => {
             >
               <GitHubIcon sx={{ mr: 0.5 }} fontSize="small" />
               GitHub Repository
-            </Link>
-            <Link href="#" color="text.secondary" underline="hover">
-              Privacy Policy
-            </Link>
-            <Link href="#" color="text.secondary" underline="hover">
-              Terms of Service
-            </Link>
-            <Link href="#" color="text.secondary" underline="hover">
-              Contact
             </Link>
           </Box>
         </Box>
