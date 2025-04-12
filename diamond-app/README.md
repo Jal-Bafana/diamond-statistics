@@ -2,11 +2,13 @@
 
 A modern React web application that provides accurate diamond price estimates based on statistical analysis of diamond characteristics.
 
+### 🌐 [Live App Demo](https://pns-diamondcheck.vercel.app/)
+
 ## 🚀 Features
 
 - **Price Estimation**: Get accurate price estimates based on diamond characteristics (carat, cut, clarity, color)
 - **Educational Content**: Learn about the 4Cs of diamonds and how each factor impacts price
-- **Interactive Interface**: User-friendly design with sliders and dropdowns for easy input
+- **Interactive Interface**: User-friendly design with text inputs and dropdowns for easy data entry
 - **Visualization**: See how different factors impact diamond prices
 - **Responsive Design**: Works on desktop, tablet, and mobile devices
 
@@ -50,8 +52,8 @@ The statistical models achieve an R-squared value exceeding 0.95, indicating tha
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/diamond-price-estimator.git
-   cd diamond-price-estimator
+   git clone https://github.com/Arjunmehta312/Stats-Project-Sem4.git
+   cd Stats-Project-Sem4/diamond-app
    ```
 
 2. Install dependencies
@@ -76,13 +78,25 @@ This builds the app for production to the `build` folder.
 
 ## 🌐 Deployment
 
-The application can be deployed to various platforms:
+The application is currently deployed on Vercel at [https://pns-diamondcheck.vercel.app/](https://pns-diamondcheck.vercel.app/)
 
-### GitHub Pages
+### Deploying to Vercel
+
+1. Install Vercel CLI:
+   ```
+   npm install -g vercel
+   ```
+
+2. Deploy:
+   ```
+   vercel
+   ```
+
+### GitHub Pages Deployment
 
 1. Update the `homepage` field in `package.json`:
    ```json
-   "homepage": "https://yourusername.github.io/diamond-price-estimator",
+   "homepage": "https://arjunmehta312.github.io/Stats-Project-Sem4",
    ```
 
 2. Install gh-pages package:
@@ -109,3 +123,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Diamond dataset analysis was conducted as part of a statistical research project
 - The regression model coefficients are derived from analysis of approximately 50,000 diamond records
+- This web application is part of the larger [Diamond Dataset Analysis project](https://github.com/Arjunmehta312/Stats-Project-Sem4)

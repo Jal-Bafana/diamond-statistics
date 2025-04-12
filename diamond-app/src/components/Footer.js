@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, Link, Divider } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Footer = () => {
   return (
@@ -15,6 +16,17 @@ const Footer = () => {
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', gap: 3 }}>
+            <Link 
+              href="https://github.com/Arjunmehta312/Stats-Project-Sem4" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              color="text.secondary" 
+              underline="hover"
+              sx={{ display: 'flex', alignItems: 'center' }}
+            >
+              <GitHubIcon sx={{ mr: 0.5 }} fontSize="small" />
+              GitHub Repository
+            </Link>
             <Link href="#" color="text.secondary" underline="hover">
               Privacy Policy
             </Link>

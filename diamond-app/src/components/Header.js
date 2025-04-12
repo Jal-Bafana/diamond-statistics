@@ -10,10 +10,12 @@ import {
   IconButton,
   Menu,
   MenuItem,
-  useTheme
+  useTheme,
+  Tooltip
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import DiamondIcon from '@mui/icons-material/Diamond';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Header = () => {
@@ -97,10 +99,20 @@ const Header = () => {
                 >
                   About
                 </MenuItem>
+                <MenuItem 
+                  component="a" 
+                  href="https://github.com/Arjunmehta312/Stats-Project-Sem4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleClose}
+                >
+                  <GitHubIcon fontSize="small" sx={{ mr: 1 }} />
+                  GitHub
+                </MenuItem>
               </Menu>
             </Box>
           ) : (
-            <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
+            <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
               <Button 
                 component={RouterLink} 
                 to="/" 
@@ -125,6 +137,18 @@ const Header = () => {
               >
                 About
               </Button>
+              <Tooltip title="View source code">
+                <IconButton
+                  color="inherit"
+                  component="a"
+                  href="https://github.com/Arjunmehta312/Stats-Project-Sem4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{ ml: 1 }}
+                >
+                  <GitHubIcon />
+                </IconButton>
+              </Tooltip>
             </Box>
           )}
         </Toolbar>
