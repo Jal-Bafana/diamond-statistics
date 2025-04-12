@@ -8,7 +8,6 @@ import {
   MenuItem,
   Button,
   Grid,
-  Slider,
   InputAdornment,
   Tooltip,
   Paper,
@@ -53,16 +52,6 @@ const EstimatorForm = () => {
     
     // Validate input
     validateField(name, value);
-  };
-
-  const handleSliderChange = (name) => (event, newValue) => {
-    setDiamond(prev => ({
-      ...prev,
-      [name]: newValue
-    }));
-    
-    // Validate input
-    validateField(name, newValue);
   };
 
   const validateField = (name, value) => {
@@ -120,54 +109,32 @@ const EstimatorForm = () => {
               Provide the characteristics of your diamond to get an estimated price range.
             </Typography>
             
-            <Box sx={{ mb: 3 }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                <Typography id="carat-slider-label">
-                  Carat Weight
-                </Typography>
-                <Tooltip title={featureDescriptions.carat} placement="right">
-                  <InfoIcon color="action" sx={{ ml: 1, fontSize: 18 }} />
-                </Tooltip>
-              </Box>
-              <Grid container spacing={2} alignItems="center">
-                <Grid item xs>
-                  <Slider
-                    value={diamond.carat}
-                    onChange={handleSliderChange('carat')}
-                    aria-labelledby="carat-slider-label"
-                    min={0.1}
-                    max={5}
-                    step={0.01}
-                    marks={[
-                      { value: 0.5, label: '0.5' },
-                      { value: 1, label: '1' },
-                      { value: 2, label: '2' },
-                      { value: 3, label: '3' },
-                      { value: 4, label: '4' },
-                      { value: 5, label: '5' },
-                    ]}
-                  />
-                </Grid>
-                <Grid item>
-                  <TextField
-                    name="carat"
-                    value={diamond.carat}
-                    onChange={handleChange}
-                    type="number"
-                    inputProps={{
-                      min: 0.1,
-                      max: 10,
-                      step: 0.01,
-                    }}
-                    error={!!errors.carat}
-                    helperText={errors.carat}
-                    sx={{ width: 80 }}
-                  />
-                </Grid>
-              </Grid>
-            </Box>
-            
             <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                  <Typography>
+                    Carat Weight
+                  </Typography>
+                  <Tooltip title={featureDescriptions.carat} placement="right">
+                    <InfoIcon color="action" sx={{ ml: 1, fontSize: 18 }} />
+                  </Tooltip>
+                </Box>
+                <TextField
+                  fullWidth
+                  name="carat"
+                  value={diamond.carat}
+                  onChange={handleChange}
+                  type="number"
+                  inputProps={{
+                    min: 0.1,
+                    max: 10,
+                    step: 0.01,
+                  }}
+                  error={!!errors.carat}
+                  helperText={errors.carat || "Enter a value between 0.1 and 10"}
+                />
+              </Grid>
+              
               <Grid item xs={12}>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                   <Typography>
