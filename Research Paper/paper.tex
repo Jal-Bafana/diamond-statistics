@@ -6,7 +6,7 @@
 \usepackage[english]{babel}
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
-\usepackage{natbib}
+\usepackage[numbers]{natbib}  % Specify the 'numbers' option to use numerical citations
 \usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{booktabs}
@@ -16,6 +16,7 @@
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{subfigure}
+\usepackage{authblk}
 
 \geometry{a4paper,margin=1in}
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
@@ -33,11 +34,20 @@
 % Set graphics path for images
 \graphicspath{{images/}}
 
+% Set bibliography style to numerical
+\bibliographystyle{plainnat}
+
 \begin{document}
 
 \title{\textbf{Diamond Price Determinants: A Statistical Analysis of the Diamonds Dataset}}
-\author{Research Team\\Statistical Analysis and Predictive Modeling Division}
-\date{\today}
+
+\author[]{Arjun Mehta}
+\author[]{Dakshita Galhotra}
+\author[]{Rhea Chavan}
+\author[]{Jal Bafana}
+\affil[]{B. Tech Computer Science and Engineering, NMIMS MPSTME, Mumbai, Maharashtra, India}
+\affil[]{arjun.mehta18@nmims.in, dakshita.galhotra55@nmims.in, rhea.chavan80@nmims.in, jal.bafana54@nmims.in}
+
 
 \maketitle
 
