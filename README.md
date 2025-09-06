@@ -2,6 +2,20 @@
 
 This project provides a comprehensive statistical analysis of the diamonds dataset using R programming language. It covers a wide range of statistical techniques from basic descriptive statistics to advanced modeling and predictive analysis.
 
+## Diamond Price Estimator Web App
+
+We've created an interactive web application based on our statistical analysis that allows users to estimate diamond prices:
+
+### 🌐 [Live Diamond Price Estimator App](https://pns-diamondcheck.vercel.app/)
+
+This user-friendly web application includes:
+- Interactive pricing tool that uses our regression models
+- Educational content about the 4Cs of diamonds
+- Visualizations of how each factor affects diamond prices
+- Mobile-responsive design for all devices
+
+The app is built with React and Material UI, making it accessible to consumers and industry professionals alike. The source code for the web application is in the `diamond-app` directory of this repository.
+
 ## Project Overview
 
 The analysis is structured to match the topics covered in the university's Probability and Statistics course, including:
@@ -26,11 +40,13 @@ The analysis is structured to match the topics covered in the university's Proba
   - `high_quality/`: Publication-quality visualizations
 - `run_analysis.R`: Main script to run the entire analysis
 - `Lab Files/`: Reference materials from practical labs
+- `diamond-app/`: Interactive web application for diamond price estimation
 
 ## System Requirements
 
 - R (version 4.0 or higher)
 - RStudio (recommended for viewing and running the scripts)
+- Node.js and npm (for running the web application)
 
 ## Required R Packages
 
@@ -98,11 +114,33 @@ You can also run each analysis script separately for more focused analysis:
    - `source("analysis/advanced_modeling.R")` - Advanced modeling
    - `source("analysis/visualization_insights.R")` - Visualizations
 
+## Running the Web Application
+
+To run the Diamond Price Estimator web application locally:
+
+1. Navigate to the `diamond-app` directory:
+   ```
+   cd diamond-app
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npm start
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app
+
 ## Expected Outputs
 
 - **Plots**: Various statistical visualizations will be saved in the `plots/` directory
 - **Analysis Results**: CSV files with analysis results will be saved in the `analysis/` directory
 - **Console Output**: Detailed statistical results will be printed to the R console
+- **Web Application**: An interactive diamond price estimator tool
 
 ## Plot Descriptions and Interpretations
 
@@ -223,3 +261,4 @@ After running the basic analysis, you can:
 2. Change visualization parameters to highlight different patterns
 3. Experiment with different modeling techniques in the advanced_modeling.R script
 4. Export the high-quality visualizations for use in reports or presentations
+5. Extend the web application with additional features and visualizations
